@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type= "text/css" href="static/app.css">
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="/"> Home </a>
+      <a href="/form"> Start Game </a>
+      <a href="/story"> View Story </a>
+    </nav>
+
+    <main id="content">
+      {% block content %} {% endblock %}
+    </main>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome ! Madlibs</h1>
+
+<form action="/form">
+  <label for="template_select" id="home_label"> Choose a template here: </label>
+  <p>
+    <select name="template_idx" id="template_select">
+      {% for template in templates %}
+      <option id="select_option" value="{{ loop.index0 }}">{{ template }}</option>
+      {% endfor %}
+    </select>
+  </p>
+  <p>
+    <button type="submit" id="homepage_button">Click Here</button>
+  </p>
+</form>
+
+{% endblock %}

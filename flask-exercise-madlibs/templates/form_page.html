@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Madlibs Game{% endblock %}
+
+{% block content %}
+<h1>Madlibs</h1>
+<form id="formcontainer" action="/story">
+  {% for prompt in words %}
+  <p id="useranswer">
+    <label for="{{ prompt }}">{{ prompt }}:</label>
+    <input type="text" id="formpage_input" placeholder="answer here" name="{{ prompt }}" id="{{ prompt }}" required>
+  </p>
+  {% endfor %}
+  <input type="hidden" name="template_idx" value="{{ int_template_idx }}">
+  <button type="submit" id="formpage_button">Generate</button>
+</form>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!-- question.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Question {{ index + 1}}</h2>
+
+<!-- useranswer data sent to /answer/routewith POST req -->
+  <form action="/answer/{{ index }}" method="post">
+      <p>{{ question.question }}</p>
+
+      {% for choice in question.choices %}
+        <label>
+        <input type="radio" name="answer" value="{{ choice }}" required> {{ choice }}
+        </label><br>
+      {% endfor %}
+
+    <button type="submit">Submit Answer</button>
+  </form>
+{% endblock %}
+
+
+

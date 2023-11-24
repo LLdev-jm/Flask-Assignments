@@ -1,0 +1,138 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #93add6;
+  font-family: monospace;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.navbar {
+  height: 10%;
+  background-color: black;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-around;
+}
+
+.navbar a {
+  color: #f8da49;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-size: 14px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #88867c;
+  color: black;
+  justify-content: center;
+  text-align: center;
+  height: 70%;
+}
+
+main {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1200px;
+  padding: 20px;
+  justify-content: center;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 36px;
+  color: #30425c;
+  text-align: center;
+  justify-content: center;
+}
+
+#home_label {
+  font-size: 24px;
+  color: rgb(48, 48, 40);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#template_select {
+  width: fit-content;
+  padding: 15px;
+  margin-top: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  background-color: #cececb;
+}
+
+#homepage_button {
+  padding: 5px;
+  margin-top: 10px;
+  border: 2px solid #f8da49;
+  border-radius: 5px;
+  color: #f8da49;
+  font-size: 16px;
+  background-color: black;
+}
+
+
+#useranswer {
+  font-size: 16px;
+  color: #0f3052;
+  padding: 20px;
+  border: 1.5px solid #f8da49;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  border-radius: 5px;
+  text-align: left;
+  margin-bottom: 20px;
+  
+}
+
+#formpage_input {
+  font-size: 16px;
+  background-color: transparent;
+  border: 3px dotted #464444;
+  border-radius: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+#formpage_button {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: 5px outset rgb(125, 125, 119);
+  border-radius: 10px;
+  background-color: #383837;
+  color: rgb(244, 224, 124);
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  width: 80%;
+  max-width: 300px;
+}
+
+#formpage_button:active,
+#formpage_button:focus {
+  outline: none;
+  transform: scale(1.2);
+}
+
+#template option {
+  border: 3px solid #C74433;
+  padding: 10px;
+}

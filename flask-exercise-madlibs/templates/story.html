@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Generated Story{% endblock %}
+
+{% block content %}
+<h1>Generated Story</h1>
+
+{% if generated_story %}
+<p id="story_par1">{{ generated_story }}</p>
+
+
+{% endif %}
+
+{% endblock %}
