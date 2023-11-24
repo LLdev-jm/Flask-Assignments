@@ -26,10 +26,17 @@ def show_title():
 
 @app.route('/questions/<int:index>')
 def question(index):
-   """Access questions and indices from satisfaction_survey"""
-   
+   """Access questions and indices from satisfaction_survey
+        Prevents user from skipping questions """
 
    survey_questions = satisfaction_survey.questions
+   responses = session.get(RESPONSES_KEY,[])
+
+#prevents user from manually entering url and skipping / going back to questions
+   if index != len(responses):
+      flash("Please do not skip any questions or press the back button. ")
+      return redirect(f"{len(responses)}")
+
 
    if 0 <= index < len(survey_questions):
       current_question = survey_questions[index]
