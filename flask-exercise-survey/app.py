@@ -5,8 +5,8 @@ from surveys import Question, Survey, satisfaction_survey
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = "surveyyyy123545"
-app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
-debug = DebugToolbarExtension(app)
+# app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
+# debug = DebugToolbarExtension(app)
 
 
 RESPONSES_KEY = "responses"
@@ -19,9 +19,18 @@ def show_title():
    session[RESPONSES_KEY] = []
 
    survey_title = satisfaction_survey.title
-   survey_instructions = satisfaction_survey.instructions
 
-   return render_template('title_page.html', survey_title=survey_title, survey_instructions=survey_instructions)
+   return render_template('title_page.html', survey_title=survey_title)
+
+
+
+@app.route('/', methods=['POST'] )
+def show_survey():
+      survey_title = satisfaction_survey.title
+      survey_instructions = satisfaction_survey.instructions
+      return render_template('show_survey.html', survey_title=survey_title, survey_instructions=survey_instructions)
+    
+    
 
 
 @app.route('/questions/<int:index>')
@@ -34,16 +43,13 @@ def question(index):
 
 #prevents user from manually entering url and skipping / going back to questions
    if index != len(responses):
-      flash("Please do not skip any questions or press the back button. ")
+      flash("Please do not skip any questions or press the back button. ", "warning")
       return redirect(f"{len(responses)}")
-
 
    if 0 <= index < len(survey_questions):
       current_question = survey_questions[index]
-
       return render_template('question.html', index=index,question=current_question)
-
-    
+   
    return redirect('/title_page')
 
 
@@ -66,4 +72,4 @@ def answer(index):
       if next_index < len(satisfaction_survey.questions):
          return redirect(f'/questions/{next_index}')
       else:
-            return render_template('thank_you.html')
+         return render_template('thank_you.html')

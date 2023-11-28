@@ -3,14 +3,20 @@
 
 {% block content %} 
 
-
-   <h1> {{ survey_title }}</h1>
-         <h2> {{ survey_instructions}} </h2>
-
+<h1>Welcome ! </h1>
       
-      <form action="/questions/0">
-              <button type="submit">Get Started </button>
+      
+            <form method="POST">
+            <p>Please pick a survey</p>
+
+            <select name="survey_type" id="survey_list">
+                  <option value="satisfaction">{{ survey_title }}</option>
+            </select>
+      <div>
+            <button type="submit">Get Started</button>
+      </div>
       </form>
-    
+
+
 {% endblock %}
   

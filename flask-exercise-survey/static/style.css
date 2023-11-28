@@ -1,0 +1,170 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+  padding: 0;
+  background-color: rgb(209, 196, 204);
+}
+
+h1 {
+  color: #2b2115;
+  font-size: 50px;
+}
+
+p {
+  margin: 5px;
+  margin-bottom: 20px;
+  color: #624723;
+  font-size: 20px;
+}
+
+#survey_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#survey_list {
+  padding: 5px;
+  width: 270px;
+  font-size: 17px;
+  border: 2px solid #7c7d45;
+  border-radius: 5px;
+  background-color: #d8dbdf;
+  color: #352f2f;
+}
+
+#survey_list option {
+  background-color: #b0ab1e;
+  color: rgb(33, 82, 32);
+}
+
+
+.flash-container {
+  background-color: rgb(216, 54, 54);
+  color: #e8e4e5;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #bf3442;
+  border-radius: 5px;
+  zoom: 200%;
+}
+
+.home-button {
+  position: relative;
+  color: #dfdada;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  zoom: 120%;
+}
+
+
+#back-home-button {
+  width: 80px;
+  height: 70px;
+  background-color: rgb(218, 218, 163);
+  border: 2px solid #802c2c;
+  padding: 5px;
+}
+
+
+
+
+
+/* --------------------------------------------------- */
+/* not so static styling. more dynamic  */
+
+/* body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+  padding: 0;
+  background-color: rgb(209, 196, 204);
+}
+
+
+h1 {
+  color: #2b2115;
+  font-size: 50px;
+}
+
+p {
+  margin: 5px;
+  margin-bottom: 20px;
+  color: #624723;
+  font-size: 20px;
+}
+
+#survey_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#survey_list {
+  padding: 5px;
+  width: 50px;
+  font-size: 17px;
+  border: 2px solid #7c7d45;
+  border-radius: 5px;
+  width: 270px;
+  background-color: #d8dbdf;
+  color: #352f2f;
+
+}
+
+#survey_list option {
+  background-color: #b0ab1e;
+  color: rgb(33, 82, 32);
+}
+
+button {
+  padding: 8px;
+  margin-top: 20px;
+  font-size: 14px;
+  background-color: #b9bdb9;
+  border: 1px solid #0e0e0e;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #55a155;
+  transform: scale(1.05);
+  border: 1px solid #065806;
+}
+
+button:active {
+  background-color: #1c8b1e;
+  transform: scale(0.95);
+}
+
+.flash-container {
+  background-color: rgb(216, 54, 54);
+  color: #e8e4e5;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #bf3442;
+  border-radius: 5px;
+  zoom: 200%;
+}
+
+
+
+.home-button {
+  position: relative;
+  color: #dfdada;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  zoom: 120%;
+}
+
+
+#back-home-button {
+  width: 80px;
+  height: 70px;
+  background-color: rgb(218, 218, 163);
+  border: 2px solid #802c2c;
+  padding: 5px;
+} */
