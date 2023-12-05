@@ -16,6 +16,8 @@ Assignments( exercises / projects ) currently include :
 
 - Flask Tools: Survey
 
+- Flask Testing
+
 
 
 ## **Progress** 🌱
