@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boggle Game</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+  </head>
+
+  
+ <body>
+
+  <h1> Boggle Game! </h1>
+
+  <section id="game_Container">
+    <button id="start_button">Start !</button>
+    <div id="score_display">
+      <p id="score_board">Score: </p>
+      <p id="high_score">High Score: </p>
+    </div>
+      
+      <table class="board">   
+                  <p id="timer_p"> seconds </p>
+        <tbody>
+          {% for row in generated_board %}
+          <tr>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+            <p id='result_good' class="good_msg"></p>
+            <p id='result_bad' class="bad_msg"></p>
+      </table>
+      
+      <form action="/check-word" id="game_form" method="POST">
+        <input type="text" id="user_input" name="word" placeholder="Type your guess here" required>
+        <button id="check_button" type="submit">check word !</button>  
+      </form>
+
+<!-- <button id="restart_button" style="display: none;">Restart !</button> -->
+
+  </section>
+
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+    <script src="static/boggle.js"></script>
+ </body>
+
+</html>
