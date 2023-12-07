@@ -18,6 +18,8 @@ Assignments( exercises / projects ) currently include :
 
 - Flask Testing
 
+- Divide and Conquer - Problem Solving
+
 
 
 ## **Progress** 🌱
